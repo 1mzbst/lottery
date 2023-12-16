@@ -46,4 +46,9 @@ public class Toys {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+    @Override
+    public String toString() {
+        return "id: " + id + " name: " + name + " quantity: " + quantity + " weight: " + weight;
+    }
 }
