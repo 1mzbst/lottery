@@ -51,4 +51,5 @@ public class Toys {
     public String toString() {
         return "id: " + id + " name: " + name + " quantity: " + quantity + " weight: " + weight;
     }
+
 }

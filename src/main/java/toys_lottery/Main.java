@@ -1,8 +1,8 @@
 package toys_lottery;
 
 import toys_lottery.lottery.Lottery;
+import toys_lottery.toys.ListOfToys;
 import toys_lottery.toys.Toys;
-
 import java.io.FileNotFoundException;
 //import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
@@ -11,27 +11,58 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
 
-        Toys doll = new Toys(1, "ПатПат", 1, 3);
-        Toys doll2 = new Toys(2, "Кря-Кря", 4, 34);
-        Toys doll3 = new Toys(3, "Жмяк", 10, 83);
-        
-        ArrayList<Toys> test = new ArrayList<>();
-        test.add(doll);
-        test.add(doll2);
-        test.add(doll3);
 
-        for (int i = 0; i < test.size(); i++) {
-            if (test.get(i).getWeight() == 83) {
-                System.out.println(test.get(i));
-            }
+
+
+        /**
+         * Создаю натуральную очередь для проверки работосопосбности помещения и ввыдачи результата.
+         */
+
+
+        ListOfToys.getListOfToys();
+//        ArrayList<Integer> test4 = new ArrayList<>();
+        ArrayList<Toys> test5 = ListOfToys.getListOfToys();
+        System.out.println(test5);
+        PriorityQueue<Integer> weightNaturalQueue = new PriorityQueue<>();
+        for (int i = 0; i < test5.size(); i++) {
+
+            weightNaturalQueue.add(test5.get(i).getWeight());
+//            test5.add(test5.get(i).getWeight());
         }
 
-        ArrayList <Integer> test2 = Lottery.getLottery();
-
-        for (int i = 0; i < test2.size(); i++) {
-            System.out.println(test2.get(i));
-
+        while (weightNaturalQueue. size() != 0){
+            System.out.println(weightNaturalQueue.poll());
         }
+//        for (int i = 0; i < weightNaturalQueue.size(); i++) {
+//            System.out.println(weightNaturalQueue.size());
+//            System.out.println(weightNaturalQueue);
+//            System.out.println(weightNaturalQueue.poll());
+
+//        }
+
+
+
+
+
+
+
+
+
+
+
+
+//        for (int i = 0; i < test.size(); i++) {
+//            if (test.get(i).getWeight() == 83) {
+//                System.out.println(test.get(i));
+//            }
+//        }
+//
+//        ArrayList <Integer> test2 = Lottery.getLottery();
+//
+//        for (int i = 0; i < test2.size(); i++) {
+//            System.out.println(test2.get(i));
+//
+//        }
 
 //            String arg = args[i];
 //
