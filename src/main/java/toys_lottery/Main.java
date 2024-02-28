@@ -1,6 +1,8 @@
 package toys_lottery;
 
 import toys_lottery.lottery.Lottery;
+import toys_lottery.player.GetPlayer;
+import toys_lottery.player.Player;
 import toys_lottery.toys.ListOfToys;
 import toys_lottery.toys.Toys;
 import java.io.FileNotFoundException;
@@ -11,6 +13,14 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
 
+        ArrayList <Player> getP = new ArrayList<>();
+        getP = GetPlayer.getPlayers();
+        System.out.println(getP);
+
+        // у нас есть функция создающая список участников(заменить названия классов) и есть список игрушек,
+        // следующий этап совместить эти вещи в лоттерею и сделать вывод в документ
+
+//        System.out.println(ListOfToys.getListOfToys());
 
 
 
@@ -18,21 +28,21 @@ public class Main {
          * Создаю натуральную очередь для проверки работосопосбности помещения и ввыдачи результата.
          */
 
-
-        ListOfToys.getListOfToys();
-//        ArrayList<Integer> test4 = new ArrayList<>();
-        ArrayList<Toys> test5 = ListOfToys.getListOfToys();
-        System.out.println(test5);
-        PriorityQueue<Integer> weightNaturalQueue = new PriorityQueue<>();
-        for (int i = 0; i < test5.size(); i++) {
-
-            weightNaturalQueue.add(test5.get(i).getWeight());
-//            test5.add(test5.get(i).getWeight());
-        }
-
-        while (weightNaturalQueue. size() != 0){
-            System.out.println(weightNaturalQueue.poll());
-        }
+//
+//        ListOfToys.getListOfToys();
+////        ArrayList<Integer> test4 = new ArrayList<>();
+//        ArrayList<Toys> test5 = ListOfToys.getListOfToys();
+//        System.out.println(test5);
+//        PriorityQueue<Integer> weightNaturalQueue = new PriorityQueue<>();
+//        for (int i = 0; i < test5.size(); i++) {
+//
+//            weightNaturalQueue.add(test5.get(i).getWeight());
+////            test5.add(test5.get(i).getWeight());
+//        }
+//
+//        while (weightNaturalQueue. size() != 0){
+//            System.out.println(weightNaturalQueue.poll());
+//        }
 //        for (int i = 0; i < weightNaturalQueue.size(); i++) {
 //            System.out.println(weightNaturalQueue.size());
 //            System.out.println(weightNaturalQueue);

@@ -33,5 +33,8 @@ public class Player {
             this.age = age;
         }
     }
+    public String toString() {
+        return "FIO: " + FIO + " Age: " + age;
+    }
 
 }
