@@ -1,10 +1,9 @@
 package toys_lottery;
 
 import toys_lottery.lottery.Lottery;
-import toys_lottery.player.GetPlayer;
+import toys_lottery.player.GetListOfPlayers;
 import toys_lottery.player.Player;
-import toys_lottery.toys.ListOfToys;
-import toys_lottery.toys.Toys;
+
 import java.io.FileNotFoundException;
 //import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
@@ -14,11 +13,30 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
 
         ArrayList <Player> getP = new ArrayList<>();
-        getP = GetPlayer.getPlayers();
+        getP = GetListOfPlayers.getPlayers();
         System.out.println(getP);
 
         // у нас есть функция создающая список участников(заменить названия классов) и есть список игрушек,
         // следующий этап совместить эти вещи в лоттерею и сделать вывод в документ
+        // сделать exception для возраста игрока.
+        // Участник запускает лотер. Выпадает число которое: >= 90 & <= 100, >= 70 & < 90, >= 40 & < 70, >= 0 & < 40.
+        // Участнику присваивается номер Id игрушки, а результат заносится в текстовый документ.
+        // Перед выводом в текстовой документ список Участник - выигрыш, поместить в список, а вывести в текстовый
+        // документ при помощи натуральной очереди.
+
+
+        // Счетчик состоит из количества игроков переданных в методе GetListOfPlayers.
+
+        for (int i = 1; i < 10; i++) {
+
+            System.out.println("Игрок под номером " + i + "крутите барабан!");
+            int numberOfLotteryRoll = Lottery.getLottery();
+
+        // в новый список положить номер игрока с id == i счетчика, и выпавшую игрушку из совпадения результата
+        // лотереи и weight
+        }
+
+
 
 //        System.out.println(ListOfToys.getListOfToys());
 

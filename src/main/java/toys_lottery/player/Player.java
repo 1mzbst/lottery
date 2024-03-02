@@ -1,12 +1,23 @@
 package toys_lottery.player;
 
 public class Player {
+
+    private int pId;
     private String FIO;
     private int age;
 
-    public Player (String FIO, int age){
+    public Player (int pId, String FIO, int age){
+        this.pId = pId;
         this.FIO = FIO;
         this.age = age;
+    }
+
+    public int getpId() {
+        return pId;
+    }
+
+    public void setpId(int pId) {
+        this.pId = pId;
     }
 
     public String getFIO() {
@@ -34,7 +45,7 @@ public class Player {
         }
     }
     public String toString() {
-        return "FIO: " + FIO + " Age: " + age;
+        return "pId: " + pId + " | FIO: " + FIO + " | Age: " + age;
     }
 
 }
